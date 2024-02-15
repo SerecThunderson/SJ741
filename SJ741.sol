@@ -1,89 +1,136 @@
-//                                    ...........................                                     
-//                          .*/(((((((#&@@@@&%#%&@&%#(%&@@@@&%##(((((/,.                              
-//                       .,/(#&&&&&&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&&&&&%%%%/,                        
-//                    ,*(#%%&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&#(*.                     
-//                    *#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*                     
-//                    *#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*     ...             
-//            ...     *#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*                     
-//           .,****,,,*/((((#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#((((/*.,,****,.            
-//          .*(%#(/**,,,,*,,*/(###%%%%&@@@@@@@@@@@@@@@@@@@@@@@@@@@@&%%%#####/*,,,,*(%%%%(*.           
-//        ,*/#&@&%#(/*,,,,,.,,**/((##%%&&%%%%%%%%%%&&&&&&&&&@@@@@@&%#(((((((/*,**/#%@@@@&#/*,         
-//       ,(&@@@@@@@&#(/*,,,,,,,*/(%&&@&%#(*,,,****/(#%%%%%%%%%&&%%%#((###/*,,**(%@@@@@@@@@@&(,        
-//       ,(&@@@@@@@@@@&#//*****/(%&&@@@@@&%#(*,,,*/(#%%%%%%%%%&%%%##((//***/(%@@@@@@@@@@@@@&(,        
-//       ./#%&&&&@@%(/*********/(%&&@@@@@@&&%#(/*,*/#%%#%%&&&%%%######(/***/#&@&%####%%&&&&%(,.       
-//       .,/(#%%#(/*,.,/###%#(//#%%&@@@@@@@@&%%#((((((#%&&&&%%#######((//(#%&@@&#(/*,,***///*,..      
-//       .,*//((//*,. ,/#%&@@&##%%%&@@@@@@@@&%##%%%#//(#%%###############&@@@&%#(/,.     ..,...       
-//       .*(#/**(%&#*... *(%&&&&&%%&@@@&&&&&%#/(%@&#/**,*//(((((#####%&&@@@&#(**,...     ....         
-//         .*(%&(*.*(%(*.....,*/(%&&@@%(****(%@@@@&(.          ..,*/##(/////*,,,......    ..          
-//           .,,.   ....... ..,,*///(//*,/#&&@@@@@&/.              ..,,,,,,,,,..                      
-//                 .,/*, .............*/#%&@@@@@@@&(,                   ...,*/((((*.                  
-//                 ,*(/*,,,...  .....,/#&&&&&&@&&&#/,       ........    .,*/#&@&%#/,                  
-//                    ,/#(/*,,,,,*//(((((###%%%%##/*. .,,,,,,******,,,,,*(%@@&&(,                     
-//                       *(&%(,..,,*/(((((##%&@@@@&#/,,***********,,,...*(%&(*                        
-//                        .,*(%#/*,,,*/(((((#%&@@@&#/*************,,,...,,,,.                         
-//                          .,//(((/,,*/((((##%%%%%(/**********,,.......                              
-//                             .*#%#(////((((#####(/*****,,,,,,,.  ...                                
-//                               .,(%&#/**/((((((((/****,,.......,....                                
-//                                 .,*(%@#/,*/(((((/****,.      ...                                   
-//                                    ,*/**,*/(((((/*,,..                                             
-//                                      ...,,**/(((/*,..                                              
-//                                        ...,,,*//*,..                                               
-//                                           ..,,...
+//   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+//   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣾⣿⣷⣾⣿⣿⣿⣿⣶⣾⣿⣿⣶⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+//   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠉⢉⡽⢋⣙⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+//   ⠀⠀⠀⠀⠀⠀⠀⢰⣿⣦⣀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣛⣓⣒⠶⢤⣾⠀⠀⠸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+//   ⠀⠀⠀⠀⠀⠀⠀⢸⣿⠳⣿⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⡄⠀⠀⢳⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+//   ⠀⠀⠀⠀⠀⠀⠀⠀⣿⡄⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⣿⡦⠀⠀⠻⠿⣦⣀⡀⠀⠀⠀⠀⠀⠀
+//   ⠀⠀⠀⠀⠀⠀⠀⠀⢸⣷⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢿⡏⠀⠜⡴⠁⠀⠀⠀⡀⠀⠀⠉⠉⠲⢦⡀⠀⠀
+//   ⠀⠀⠀⠀⠀⠀⠀⢠⣿⣷⡾⢿⣿⣿⣿⣿⣿⠿⢿⣿⣿⣿⣿⣿⡿⠛⠉⠁⠀⠀⣸⠀⠀⠀⢧⠀⠀⠀⠀⠹⠒⢤⣀⠀⠀⠁⠈⢢⠀
+//   ⠀⠀⠀⠀⠀⠀⠀⠈⣿⣟⠀⠀⠈⠻⣿⠏⢨⠔⢦⠈⢻⣿⡼⠋⢀⣤⣶⣶⣿⣿⣿⣄⢠⣀⡜⠆⠀⢀⡠⠴⠒⠂⠈⢻⢦⡀⠀⠈⡇
+//   ⠀⠀⢀⣶⣿⣷⠀⠀⠘⣿⡄⠀⠐⣶⢬⣇⠉⢣⡸⠀⣰⣿⣁⣴⣿⣿⣿⣿⣿⣿⣟⢿⣽⡛⣧⠔⠒⡏⣀⠀⠀⣀⣀⣾⠀⠑⠢⠤⠃
+//   ⠀⣴⡟⣾⡟⣿⡇⣀⣼⣿⣿⣦⡀⠀⠙⠻⡆⠀⠇⢰⠟⠻⣿⣿⣿⣿⣿⡿⣿⣿⣿⣷⡿⠟⣇⠀⠀⢙⣰⣺⣽⣿⣿⣿⠀⠀⠀⠀⠀
+//   ⢸⡿⢸⡿⣰⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⡴⠃⠀⠀⢸⡀⠀⢹⣿⣿⣿⣿⣿⢹⣿⣿⣯⣀⣀⣀⣭⣏⠁⠀⠀⠈⠻⣿⣿⠀⠀⠀⠀⠀
+//   ⣿⡇⢸⡗⢸⠛⣿⡍⠉⠙⠛⠻⢭⣻⣿⣧⠀⠀⢀⣴⠷⣄⡀⠻⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣿⣿⡻⡆⠀⠀⠀⠀⠙⠇⠀⠀⠀⠀⠀
+//   ⣿⡇⢸⣷⣽⠶⠛⢷⡀⣠⠤⢤⣾⣿⣿⣽⣞⣿⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡙⢿⣿⠉⠛⢿⣿⣷⡇⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀
+//   ⣿⣇⣼⢿⠁⠀⠀⢠⡷⡇⢠⣶⡽⣿⠋⠉⢻⠿⠛⠋⠉⠉⢹⠉⢻⢻⣿⣿⣿⣿⣿⣷⡶⢏⡠⠿⣿⣷⡞⠛⠙⢳⣦⡀⠀⠀⠀⠀⠀
+//   ⣿⡏⢠⡋⣆⠀⠀⡞⠀⠇⠈⢿⣿⣏⠀⠀⠸⡀⠀⠀⠀⢀⡞⠀⢸⢸⣿⡏⠛⠛⠛⠉⣠⠋⣠⠀⠸⠧⢻⡝⢷⡄⢿⣷⠀⠀⠀⠀⠀
+//   ⢸⣧⠸⡹⡌⢆⣴⣿⡀⠀⠀⠈⠻⠿⣆⠀⠀⠳⣄⣰⣚⠉⠉⠉⠻⣾⣿⡻⣦⣀⣠⣴⠷⠟⣻⠀⠀⠀⢸⡇⢸⣧⢨⣿⠀⠀⠀⠀⠀
+//   ⠀⢿⣇⠓⠃⣼⣇⡈⠻⣄⠀⠰⢦⣀⢀⣷⡄⠀⠀⠀⠈⠉⠓⡤⣄⡈⡿⣿⣷⣶⣶⣶⣾⣿⠟⢀⠆⠀⡾⢷⣾⡇⣼⡟⠀⠀⠀⠀⠀
+//   ⠀⠈⢿⢷⣞⠛⣿⣿⣤⡍⠳⣤⣤⣤⡿⠗⠁⠀⠀⠀⠀⠀⠀⠙⠀⠹⡅⠀⠈⠉⠉⠉⠻⣤⠔⠚⠒⠊⠀⠀⠈⣿⡿⠃⠀⠀⠀⠀⠀
+//  ██████  ███████ █████ ██   ██  ██⡷⠀⠀⠀⢀⣴⠞⠓⠲⠦⣤⡀⠀⠀⣠⡿⠁⠀⠀                    
+// ██          ██      ██ ██   ██ ███⣃⣤⠶⠞⣫⣤⣟⣛⣷⣶⣿⢟⡦⣾⠟⠀⠀⠀                    
+// ███████     ██     ██  ███████  ██⡏⠾⠿⣶⣿⣿⣿⠿⣛⣽⣾⡿⠚⠁⠀                    
+//      ██ ██  ██    ██        ██  ██⠀⣠⠏⠉⠛⠳⠶⢶⣶⡿⠿⠟⠊⠉⠀                    
+// ███████  █████    ██        ██  ██⠉⠁⠀⠀⠀⠀⠀⣀⣀⣀⡀  
 
-// UNISWAP EMERALDS - FUNGIBLE NON-FUNGIBLE TOKEN
-// T.ME/PARTYHAT THIS CONTRACT IS A TEST
-// NOT AN INVESTMENT, FUNCTION NOT GUARANTEED
+// ███████ ███    ███ ███████ ██████   █████  ██      ██████   ██████ 
+// ██      ████  ████ ██      ██   ██ ██   ██ ██      ██   ██ ██      
+// █████   ██ ████ ██ █████   ██████  ███████ ██      ██   ██ ███████ 
+// ██      ██  ██  ██ ██      ██   ██ ██   ██ ██      ██   ██      ██ 
+// ███████ ██      ██ ███████ ██   ██ ██   ██ ███████ ██████  ███████
+// A public demonstration in single-contract dual-token implementations
+// with zero-conflict events, and function overloading.
+// https://github.com/SerecThunderson/SJ741
+// https://t.me/partyhat
+// SJ741 EMERALDS
 
-//SPDX-License-Identifier: UNLICENSED
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-library LibTransfer20 {
+
+// libraries to separate ERC20 and ERC721 events, and certain signature-specific functions
+// ERC20 events
+library libST20 {
     event Transfer(address indexed from, address indexed to, uint amount);
-
-    function emitTransfer(address _from, address _to, uint _amount) internal {
-        emit Transfer(_from, _to, _amount);
-    }
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+    function emitTransfer(address _from, address _to, uint _amount) internal { emit Transfer(_from, _to, _amount); }
+    function emitApproval(address _owner, address _spender, uint _value) internal { emit Approval(_owner, _spender, _value); }
 }
 
-library LibTransfer721 {
-    event Transfer(address indexed from, address indexed to, uint indexed tokenId);
-
-    function emitTransfer(address _from, address _to, uint _tokenId) internal {
-        emit Transfer(_from, _to, _tokenId);
-    }
+// ERC721 events
+library libST721 {
+    event Transfer(address indexed _from, address indexed _to, uint indexed _tokenId);
+    event Approval(address indexed _owner, address indexed _approved, uint indexed _tokenId);
+    event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
+    function emitTransfer(address _from, address _to, uint _tokenId) internal { emit Transfer(_from, _to, _tokenId); }
+    function emitApproval(address _owner, address _approve, uint _tokenId) internal { emit Approval(_owner, _approve, _tokenId); }
+    function emitApprovalForAll(address _owner, address _operator, bool _approved) internal { emit ApprovalForAll(_owner, _operator, _approved); }
 }
 
-contract sEReC20721_emerald_test {
+// ERC165 https://eips.ethereum.org/EIPS/eip-721
+interface IERC165 {
+    function supportsInterface(bytes4 interfaceID) external view returns (bool);
+}
 
-    string internal constant _name = "Uniswap Emeralds";
-    string internal constant _symbol = "EMERALD";
+// ERC20 https://eips.ethereum.org/EIPS/eip-20
+interface IERC20 {
+    function balanceOf(address account) external view returns (uint256);
+    function totalSupply() external view returns (uint256);
+    function transfer(address to, uint256 value) external returns (bool);
+    function allowance(address owner, address spender) external view returns (uint256);
+    function approve(address spender, uint256 value) external returns (bool);
+    function transferFrom(address from, address to, uint256 value) external returns (bool);
+}
 
-    uint internal constant _decimals = 6;
-    uint internal constant _subDecimals = 4; 
+// ERC721 https://eips.ethereum.org/EIPS/eip-721
+interface IERC721 is IERC165 {
+    function balanceOf(address account) external view returns (uint256);
+    function ownerOf(uint256 _tokenId) external view returns (address);
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes memory data) external payable;
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId) external payable;
+    function setApprovalForAll(address _operator, bool _approved) external;
+    function getApproved(uint256 _tokenId) external view returns (address);
+    function isApprovedForAll(address _owner, address _operator) external view returns (bool);
+    // payable removed for erc20 etherscan compatibility
+    function approve(address spender, uint256 value) external returns (bool);
+    function transferFrom(address from, address to, uint256 value) external returns (bool);
+}
 
-    uint internal constant _totalSupply = 7777 * 10**_decimals;
-    
-    uint constant ONE = 10**_decimals; 
-    uint constant MAXID = ONE + (_totalSupply / 10**_decimals); 
+interface ISJ741 is IERC20, IERC721 {
+    // library transfers can not be included in the interface
+    // incorporate them directly with library
+    // libST20.Transfer
+    // libST20.Approval
+    // libST721.Transfer
+    // libST721.Approval
+    // libST721.ApprovalForAll
+    function balanceOf(address account) external override(IERC20, IERC721) view returns (uint256);
+    function approve(address spender, uint256 value) external override(IERC20, IERC721) returns (bool);
+    function transferFrom(address from, address to, uint256 value) external override(IERC20, IERC721) returns (bool);
+}
+
+ // ERC721 Token Receiver https://eips.ethereum.org/EIPS/eip-721
+interface IERC721TokenReceiver {
+    function onERC721Received(address _operator, address _from, uint256 _tokenId, bytes memory _data) external returns(bytes4);
+}
+
+contract SJ741 is ISJ741 {
 
     string public baseURI = "https://raw.githubusercontent.com/SerecThunderson/assets/main/emeralds/metadata/";
+    string internal constant _name = "SJ741 Emeralds";
+    string internal constant _symbol = "EMERALD";
+
+    uint internal constant _decimals = 8;
+    uint internal constant _totalIds = 7777;
+    uint internal constant _totalSupply = _totalIds * 10**_decimals; 
+    uint internal constant ONE = 10**_decimals; // 1.0 token(s)
+    uint internal constant MAXID = ONE + _totalIds; // 1.0000XXXX is the range for NFT IDs
+
+    uint32 public minted; // number of unique ID mints
+    uint32[] private broken; // broken NFTs stored in limbo list 
+
     address public dev;
-    uint32 private minted;
+    bool public supportsNFTinterface;
 
-    uint32[] private broken; // store nft ids lost in limbo
-
-    mapping(address => uint) internal _balanceOf;
+    mapping(address => mapping(address => bool)) private _operatorApprovals;
     mapping(address => mapping(address => uint)) internal _allowance;
     mapping(uint256 tokenId => address) public ownerOf;
-    mapping(uint256 => address) private _tokenApprovals;
-    mapping(address => mapping(address => bool)) private _operatorApprovals;
+    mapping(uint256 => address) private _nftApprovals;
+    mapping(address => uint) internal _balanceOf;
     mapping(address => uint32[]) public ownedNFTs;
-
     mapping(uint32 => uint256) private idToIndex; 
 
-    event Approval(address indexed owner, address indexed spender, uint256 indexed amount, uint256 id);
-    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
-    //@dev declare roll under/roll over events as break/make
+    error UnsupportedReceiver();
 
     modifier onlyDev() {
         require(msg.sender == dev, "Not the developer");
@@ -91,229 +138,214 @@ contract sEReC20721_emerald_test {
     }
 
     constructor() {
+        //set minted at ONE to ensure correct operation within range of IDs
         minted = uint32(ONE);
+
+        //the message sender receives the entire supply, and is set as "dev"
         _balanceOf[msg.sender] = _totalSupply; 
         dev = msg.sender;
-
     }
 
     function name() public view virtual returns (string memory) { return _name; }
     function symbol() public view virtual returns (string memory) { return _symbol; }
     function decimals() public view virtual returns (uint) { return _decimals; }
-    function totalSupply() public view virtual returns (uint) { return _totalSupply; }
-    function balanceOf( address account) public view virtual returns (uint) { return _balanceOf[account]; }
-    function allowance(address owner, address spender) public view virtual returns (uint) { return _allowance[owner][spender]; }
+    function totalSupply() public pure override returns (uint) { return _totalSupply; }
+    function balanceOf( address account) public view override returns (uint) { return _balanceOf[account]; }
+    function allowance(address owner, address spender) public view override returns (uint) { return _allowance[owner][spender]; }
     function setBaseURI(string memory newBaseURI) public onlyDev {baseURI = newBaseURI;}
+    function changeDev(address newDev) public onlyDev {dev = newDev;}//simple function to change developer address, or revoke ownership (with address(0))
+    // toggleNFTinterface is for the small possibility of frontend system changes leading the contract to favor enabling the disabled supportsNFTinterface flag
+    // don't waste it, as frontends don't change these kinds of things willingly yet
+    function toggelNFTinterface() public onlyDev {supportsNFTinterface = !supportsNFTinterface;}
 
-    function approve(address spender, uint amount) public virtual returns (bool) {
 
-        //if the amount is greater than one token, and within range of IDs for NFTs 
-        //then set NFT approval for the given ID
-        if(amount > ONE && amount < MAXID) {
-            address owner = ownerOf[amount];
-            if (msg.sender != owner && !isApprovedForAll(owner, msg.sender)) revert("sEReC20721: You are not approved");
-            _tokenApprovals[amount] = spender;
-            emit Approval(owner, spender, ONE, amount);
+    function approve(address spender, uint amount) public override returns (bool) {
+
+        // if the amount is greater than one token, and within range of IDs for NFTs 
+        // then set NFT approval for the given ID
+        if(amount > ONE && amount <= MAXID) {
+            address owner = ownerOf[amount]; // getting the owner of token ID via the `amount` input
+            if (msg.sender != owner && !isApprovedForAll(owner, msg.sender)) revert("SJ741: You are not approved");
+            _nftApprovals[amount] = spender; // calling nft approval for the token and spender
+            libST721.emitApproval(owner, spender, amount);
             return true;
         }
         
-        //set the allowance
-        //the NFT ID range being set within a limited subset of ONE token(s)
-        //allows for non-clashing interactions
+        // else set the ERC20 allowance
+        // the NFT ID range being set within a limited subset of ONE token(s)
+        // allows for non-clashing interactions
         _allowance[msg.sender][spender] = amount;
-        emit Approval(msg.sender, spender, amount, 0);
+        libST20.emitApproval(msg.sender, spender, amount);
         return true;
     }
 
-    event Event(string, uint);
-
     function _transfer20721(address from, address to, uint amount) internal virtual {
         
-        require(_balanceOf[from] >= amount, "sEReC20721: transfer amount exceeds balance");
+        require(_balanceOf[from] >= amount, "SJ741: transfer amount exceeds balance");
         
-        //checking the decimal amount of tokens owned before transaction for both participants
-        uint256 fromDecimalsInit = _balanceOf[from] % ONE;
-        uint256 toDecimalsInit = _balanceOf[to] % ONE;
+        // checking the decimal amount of tokens owned before transaction for both participants
+        uint256 fromDecimalsPre = _balanceOf[from] % ONE;
+        uint256 toDecimalsPre = _balanceOf[to] % ONE;
         
-        //simple erc20 balance operations
+        // simple erc20 balance operations
         _transfer20(from, to, amount);
 
-        //checking the decimal amount of tokens after transaction for both partcipants
+        // checking the decimal amount of tokens after transaction for both partcipants
         uint256 fromDecimalsPost = _balanceOf[from] % ONE;
         uint256 toDecimalsPost = _balanceOf[to] % ONE;
 
-        // if sender has less decimal amount then they "rolled under" and break an NFT
-        if (fromDecimalsInit < fromDecimalsPost) {
-            emit Event("roll under", 0);
+        // stores the NFT IDs owned by `from`, enabling NFT management for that address.
+        uint32[] storage ownedNFTsArray = ownedNFTs[from];
 
-            if(ownedNFTs[from].length > 0) { // if the sender has an nft to send
+        // references NFTs marked as "broken", tracking these special state NFTs.
+        uint32[] storage brokenIDsArray = broken;
 
-                uint32 tokenId = ownedNFTs[from][0];//selects the user's first NFT from the list
+        // if sender has higher decimal count after transaction, then they "roll under" and break an NFT
+        if (fromDecimalsPre < fromDecimalsPost) {
 
-                broken.push(tokenId);//pushes the nft into the "broken list" for limbo NFTs
+            if(ownedNFTsArray.length > 0) { // if the sender has an nft to send
+
+                uint32 tokenId = ownedNFTsArray[0];//selects the user's first NFT from the list
+
+                brokenIDsArray.push(tokenId);//pushes the nft into the "broken list" for limbo NFTs
                 _transfer721(from, address(0), tokenId);//transfers the NFT ID ownership to (0) address for stewardship
-
-                emit Event("transfer to broken", tokenId);
-
-                assert(broken[broken.length - 1] == tokenId);
             }
-            else { // if they dont have an nft, but should, then mint and break it
-
-                uint32 tokenId = _mint(address(0));
-                broken.push(tokenId);
-                emit Event("mint to broken", tokenId);
-
-                assert(broken[broken.length - 1] == tokenId);
-            }
-
         }
 
-        // if receiver has more decimal amount then they "rolled over" and will "remake" an nft 
-        if (toDecimalsInit > toDecimalsPost) {
-            emit Event("roll over", 0);
+        // if receiver has lower decimal count after transaction then they "roll over" and will "remake" an nft 
+        if (toDecimalsPre > toDecimalsPost) {
 
-            if(broken.length > 0) { // recover an id from broken list
-                uint32 tokenId = broken[broken.length - 1];
+            if(brokenIDsArray.length > 0) { // recover an id from broken list
 
-                broken.pop();
-
-                _transfer721(address(0), to, tokenId);
-
-                emit Event("from broken", tokenId); //rename "make"
-
-                assert(ownerOf[tokenId] == to);
-                assert(ownedNFTs[to][ownedNFTs[to].length - 1] == tokenId); //I like the assertion checks
+                _transfer721(address(0), to, brokenIDsArray[brokenIDsArray.length - 1]);
+                brokenIDsArray.pop();
             }
             else { // mint new id
-
-                uint32 tokenId = _mint(to);
-                emit Event("mint new", tokenId);
-
-                assert(ownerOf[minted] == to);
-                assert(ownedNFTs[to][ownedNFTs[to].length - 1] == minted);
+                _mint(to);
             }
             
         }
         
-        //@NOTICE amount of tokens - amount of whole tokens being processed in int
+        // amount of tokens - amount of whole tokens being processed in int
         uint amountInTokens = amount / ONE;
 
-        //@NOTICE ignore minting nfts to and from dev when they call
-        // @DEV I think it should just be if from == dev -- one-way gem-cutting process
-        //      I have genuine concern with list parity with this implementation
-        if(from == dev){
-            return;
-        }
+        // ignore minting nfts from dev when they call -- this allows for gas-efficient team operations
+        // @DEV if dev gathers NFTs, use the ERC721 transferFrom method to extract
+        // @DEV be careful, don't let the wallet fall to some convoluted transferFrom scam to do something unexpected
+        if(from == dev) return;
 
-        //@NOTICE handle erc721 txns
-        for (uint i = 0; i < amountInTokens; i++) {
+
+        if(amountInTokens > 0) {
+
+            uint len = ownedNFTsArray.length; //len is the length, or number of NFTs in the addresses's owned array
+            len = amountInTokens < len ? amountInTokens : len;
+            // transfers owned NFTs from `from` to `to` until either all are transferred or the desired amount is reached
+            // Subtracts transferred NFT count from `amountInTokens` to update remaining transfers
+            for (uint i = 0; i < len; i++) {
+                _transfer721(from, to, ownedNFTsArray[0]); 
+            }
+            amountInTokens -= len;
+            len = brokenIDsArray.length;
+            len = amountInTokens < len ? amountInTokens : len;
             
-            if(ownedNFTs[from].length > 0){ // transfer token
-                emit Event("ownedNFTs[from].length", ownedNFTs[from].length); // @DEV remove for production
-                uint32 tokenId = ownedNFTs[from][0];
-                _transfer721(from, to, tokenId); 
-
-                assert(ownerOf[tokenId] == to);
+            // recovers NFTs from the broken state to `to`, or mints new ones if not enough broken NFTs are available
+            // if any tokens remain to be allocated, it mints new NFTs to `to` for the remaining balance
+            for (uint i = 0; i < len; i++) {        
+                _transfer721(address(0), to, brokenIDsArray[brokenIDsArray.length - 1]);
+                brokenIDsArray.pop();
             }
-            else if(broken.length > 0) { // recover token from broken list
-                emit Event("broken.length", broken.length); // @DEV remove for production
-                uint32 tokenId = broken[broken.length - 1];
-                broken.pop();
 
-                _transfer721(address(0), to, tokenId);
+            _mintBatch(to, amountInTokens - len);
 
-                assert(ownerOf[tokenId] == to);
-            }
-            else { // mint new tokens
-                _mintBatch(to, amountInTokens - i);
-                break;
-            }
-        }        
+        }
     }
 
     function _mintBatch(address to, uint256 amount) internal {
-        if(amount == 1) {
+        if(amount == 0) return; // Exit if no NFTs to mint
+
+        if(amount == 1) { // Optimize single mint process
             _mint(to);
             return;
         }
-        uint32 id = minted;
-        uint256 ownedLen = ownedNFTs[to].length;
+        uint32 id = minted; // Start ID from last minted value
+        uint256 ownedLen = ownedNFTs[to].length; // Current number of NFTs owned by 'to'
         for(uint i = 0; i < amount;) {
             unchecked {
-                id++;
+                id++; // Increment ID for each new NFT
             }
-            ownerOf[id] = to;
-            idToIndex[id] = ownedLen;
-            ownedNFTs[to].push(id);
+            ownerOf[id] = to; // Assign new NFT to owner.
+            idToIndex[id] = ownedLen; // Map NFT ID to its index in owner's array
+            ownedNFTs[to].push(id); // Add new NFT ID to owner's list
+
+            libST721.emitTransfer(address(0), to, id); // Emit NFT transfer event
 
             unchecked {
-                ownedLen++;
-                i++;
+                ownedLen++; // Increment count of owned NFTs
+                i++; // Move to next NFT
             }
         }
         unchecked {
-            minted += uint32(amount);
+            minted += uint32(amount); // Update total minted count
         }
     }
+
 
     function _mint(address to) internal returns(uint32 tokenId){
         unchecked {
-            minted++;
+            minted++; // Increment the total number of minted tokens
         }
-        tokenId = minted; 
+        tokenId = minted; // Assign the newly minted token ID
 
-        ownerOf[tokenId] = to;
-        idToIndex[tokenId] = ownedNFTs[to].length;
-        ownedNFTs[to].push(tokenId);
+        ownerOf[tokenId] = to; // Set ownership of the new token to 'to'
+        idToIndex[tokenId] = ownedNFTs[to].length; // Map the new token ID to its index in the owner's list
+        ownedNFTs[to].push(tokenId); // Add the new token ID to the owner's list of owned tokens
         
-        LibTransfer721.emitTransfer(address(0), to, tokenId);
-        assert(ownerOf[tokenId] == to);
+        libST721.emitTransfer(address(0), to, tokenId); // Emit an event for the token transfer
     }
 
-    //elegantly handle nft updates
-    //ensure break/make takes this into account
-    function _updateOwnedNFTs(address from, address to, uint32 tokenId) internal {
 
-        uint256 index = idToIndex[tokenId];
-        uint256 len = ownedNFTs[from].length;
-        uint32 lastTokenId = ownedNFTs[from][len - 1];
+    // Updates the mappings and arrays managing ownership and index of NFTs after a transfer
+    function _updateOwnedNFTs(address from, address to, uint32 tokenId) internal { 
+        uint256 index = idToIndex[tokenId]; // Get current index of the token in the owner's list
+        uint32[] storage nftArray = ownedNFTs[from]; // Reference to the list of NFTs owned by 'from'
+        uint256 len = nftArray.length; // Current number of NFTs owned by 'from'
+        uint32 lastTokenId = nftArray[len - 1]; // Last token in the 'from' array to swap with transferred token
         
-        ownedNFTs[from][index] = lastTokenId;
-        ownedNFTs[from].pop();
+        nftArray[index] = lastTokenId; // Replace the transferred token with the last token in the array
+        nftArray.pop(); // Remove the last element, effectively deleting the transferred token from 'from'
         
-        if(len - 1 != 0){
-            idToIndex[lastTokenId] = index;
-        }
-
-        ownedNFTs[to].push(tokenId);
-        idToIndex[tokenId] = ownedNFTs[to].length - 1;
+        if(len - 1 != 0){ 
+            idToIndex[lastTokenId] = index; // Update the index of the swapped token
+        } 
+    
+        ownedNFTs[to].push(tokenId); // Add the transferred token to the 'to' array
+        idToIndex[tokenId] = ownedNFTs[to].length - 1; // Update the index mapping for the transferred token
     }
 
-    // simple erc20 txn
+    // Executes a simple ERC20 token transfer.
     function _transfer20(address from, address to, uint256 amount) internal {
-        _balanceOf[from]-= amount; 
-        
+        _balanceOf[from] -= amount; // Deduct the amount from the sender's balance
         unchecked {
-            _balanceOf[to]+= amount;
+            _balanceOf[to] += amount; // Add the amount to the recipient's balance
         }
-        LibTransfer20.emitTransfer(from, to, amount);
+        libST20.emitTransfer(from, to, amount); // Emit an ERC20 transfer event
     }
 
+    // Handles the transfer of an ERC721 token, ensuring proper ownership and event emission
     function _transfer721(address from, address to, uint32 tokenId) internal virtual {
-        require(from == ownerOf[tokenId],"sEReC20721: Incorrect owner");
+        require(from == ownerOf[tokenId], "SJ741: Incorrect owner"); // Ensure 'from' is the current owner
         
-        delete _tokenApprovals[tokenId];
-        ownerOf[tokenId] = to;
-        _updateOwnedNFTs(from, to, tokenId);
-        LibTransfer721.emitTransfer(from, to, tokenId);
+        delete _nftApprovals[tokenId]; // Clear any approvals for this token
+        ownerOf[tokenId] = to; // Transfer ownership of the token to 'to'
+        _updateOwnedNFTs(from, to, tokenId); // Update ownership tracking structures
+        libST721.emitTransfer(from, to, tokenId); // Emit an ERC721 transfer event
     }
+
 
     // only erc20 calls this
     // if amount is a token id owned my the caller send as an NFT
     // else transfer20721
-    function transfer(address to, uint amount) public virtual returns (bool) {
-        //if(amount > ONE && amount < MAXID) 
-        @serec
+    function transfer(address to, uint amount) public override returns (bool) {
         if(ownerOf[amount] == msg.sender) {
             _transfer721(msg.sender, to, uint32(amount));
             _transfer20(msg.sender, to, ONE);
@@ -324,78 +356,84 @@ contract sEReC20721_emerald_test {
     }
 
     // erc20 and erc721 call this
-    function transferFrom(address from, address to, uint amount) public virtual returns (bool) {
-        uint startFrom = balanceOf(from);
-        uint startTo = balanceOf(to);
+    function transferFrom(address from, address to, uint amount) public override returns (bool) {
 
         //if amount is within the NFT id range, then a simple NFT transfer + token amount (ONE)
-        if(amount > ONE && amount < MAXID) {
+        if(amount > ONE && amount <= MAXID) {
             require(
                 //require from is the msg caller, or that caller is approved for that specific NFT, or all NFTs 
                 msg.sender == from || msg.sender == getApproved(amount) || isApprovedForAll(from, msg.sender),
-                "sEReC20721: You don't have the right"
+                "SJ741: You don't have the right"
                 );
 
             _transfer721(from, to, uint32(amount));
             _transfer20(from, to, ONE);
-            
-            assert(balanceOf(from) == startFrom - ONE);
-            assert(balanceOf(to) == startTo + ONE);
-            assert(ownerOf[amount] == to);
             return true;
         }
 
-        //covered before
         _spendAllowance(from, msg.sender, amount);
         _transfer20721(from, to, amount);
-
-        assert(balanceOf(from) == startFrom - amount);
-        assert(balanceOf(to) == startTo + amount);
         return true;
 
     }
 
-    //erc721
-    function safeTransferFrom(address from, address to, uint32 tokenId) public virtual returns (bool) {
+    // erc721
+    function safeTransferFrom(address from, address to, uint256 tokenId) public payable override {
         require(
                 msg.sender == from || msg.sender == getApproved(tokenId) || isApprovedForAll(from, msg.sender),
-                "sEReC20721: You don't have the right"
+                "SJ741: You don't have the right"
             );
-        _transfer721(from, to, tokenId); 
+        _transfer721(from, to, uint32(tokenId)); 
         _transfer20(from, to, ONE);
-        return true;
+
+        if (
+            to.code.length != 0 &&
+            IERC721TokenReceiver(to).onERC721Received(msg.sender, from, tokenId, "") !=
+            IERC721TokenReceiver.onERC721Received.selector
+        ) {
+            revert UnsupportedReceiver();
+        }
     }
 
-    //erc721
-    function safeTransferFrom(address from, address to, uint32 tokenId, bytes memory data) public virtual {
+    // erc721
+    function safeTransferFrom(address from, address to, uint256 tokenId, bytes memory data) public payable override {
         require(
                 msg.sender == from || msg.sender == getApproved(tokenId) || isApprovedForAll(from, msg.sender),
-                "sEReC20721: You don't have the right"
+                "SJ741: You don't have the right"
             );
-        _transfer721(from, to, tokenId); 
+        _transfer721(from, to, uint32(tokenId)); 
         _transfer20(from, to, ONE);
+
+        if (
+            to.code.length != 0 &&
+            IERC721TokenReceiver(to).onERC721Received(msg.sender, from, tokenId, data) !=
+            IERC721TokenReceiver.onERC721Received.selector
+        ) {
+            revert UnsupportedReceiver();
+        }
     }
 
     function _spendAllowance(address owner, address spender, uint amount) internal virtual {
-        require(_allowance[owner][spender] >= amount, "sEReC20721: insufficient allowance");
+        require(_allowance[owner][spender] >= amount, "SJ741: insufficient allowance");
         _allowance[owner][spender] -= amount;
     }
 
-    function getApproved(uint256 tokenId) public view virtual returns (address) {
+    function getApproved(uint256 tokenId) public view override returns (address) {
         if (ownerOf[tokenId] == address(0)) revert();
-        return _tokenApprovals[tokenId];
+        return _nftApprovals[tokenId];
     }
 
-    function setApprovalForAll(address operator, bool approved) public virtual {
+    function setApprovalForAll(address operator, bool approved) public override {
         _operatorApprovals[msg.sender][operator] = approved;
-        emit ApprovalForAll(msg.sender, operator, approved);
+        libST721.emitApprovalForAll(msg.sender, operator, approved);
     }
 
-    function isApprovedForAll(address owner, address operator) public view virtual returns (bool) {
+    function isApprovedForAll(address owner, address operator) public view override returns (bool) {
         return _operatorApprovals[owner][operator];
     }
 
     function tokenURI(uint256 tokenId) public view virtual returns (string memory) {
+        require(tokenId <= MAXID, "SJ741: invalid id");
         if (bytes(baseURI).length == 0) {return "";}
         return string(abi.encodePacked(baseURI, toString(tokenId - ONE), ".json"));
     }
@@ -411,50 +449,12 @@ contract sEReC20721_emerald_test {
         payable(dev).transfer(address(this).balance);
     }
 
-    function echidna_matching_nft_and_token_balance() public view returns (bool) {
-        if (msg.sender != dev && balanceOf(msg.sender) > ONE) {
-            return ownedNFTs[msg.sender].length == balanceOf(msg.sender) / ONE;
-        }
-        return true;
-    }
-
-    function echidna_correct_nft_ownership() public view returns (bool) {
-        
-        // Iterate through all minted NFT IDs
-        for (uint256 i = ONE + 1; i <= minted; i++) {
-            address owner = ownerOf[i];
-            bool found = false;
-            
-
-            if(owner == address(this)) {
-                for (uint256 j = 0; j < broken.length; j++) {
-                    if(broken[j] == i) {
-                        found = true;
-                        break;
-                    }
-                }
-            }
-            else if(owner == address(0)){ found = true; }
-            
-            // Check if the NFT ID is in the owner's list of owned NFTs
-            for (uint256 j = 0; j < ownedNFTs[owner].length; j++) {
-                if (ownedNFTs[owner][j] == i) {
-                    found = true;
-                    break;
-                }
-            }
-        
-            if (!found) return false;
-            
-        }
-        return true;
-    }
-
-    function echidna_minted_limit() public view returns (bool) {
-        return minted-ONE <= _totalSupply / ONE;
+    function supportsInterface(bytes4 interfaceId) public view override returns (bool) {
+        return
+            // Even though we support ERC721 and should return true, etherscan wants to treat us as ERC721 instead of ERC20
+            // @DEV ERC165 for ERC721 can be toggled on for reasons of frontend/dapp/script implementations, but is very specific
+            (supportsNFTinterface && interfaceId == 0x80ac58cd) || // ERC165 interface ID for ERC721
+            interfaceId == 0x01ffc9a7 || // ERC165 interface ID for ERC165
+            interfaceId == 0x36372b07;   // ERC165 interface ID for ERC20
     }
 }
-
-//@DEV --    
-//        use address(0) for the events to/from, and ownership of the NFT for break/make -- but use the broken list for the list
-//        this allows automatic untracking of limbo-NFTs, but still full-on burning of NFT-tokens to address(0) never to be recovered
