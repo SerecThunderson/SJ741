@@ -17,11 +17,11 @@
 //   ⢸⣧⠸⡹⡌⢆⣴⣿⡀⠀⠀⠈⠻⠿⣆⠀⠀⠳⣄⣰⣚⠉⠉⠉⠻⣾⣿⡻⣦⣀⣠⣴⠷⠟⣻⠀⠀⠀⢸⡇⢸⣧⢨⣿⠀⠀⠀⠀⠀
 //   ⠀⢿⣇⠓⠃⣼⣇⡈⠻⣄⠀⠰⢦⣀⢀⣷⡄⠀⠀⠀⠈⠉⠓⡤⣄⡈⡿⣿⣷⣶⣶⣶⣾⣿⠟⢀⠆⠀⡾⢷⣾⡇⣼⡟⠀⠀⠀⠀⠀
 //   ⠀⠈⢿⢷⣞⠛⣿⣿⣤⡍⠳⣤⣤⣤⡿⠗⠁⠀⠀⠀⠀⠀⠀⠙⠀⠹⡅⠀⠈⠉⠉⠉⠻⣤⠔⠚⠒⠊⠀⠀⠈⣿⡿⠃⠀⠀⠀⠀⠀
-//  ██████  ███████ █████ ██   ██  ██⡷⠀⠀⠀⢀⣴⠞⠓⠲⠦⣤⡀⠀⠀⣠⡿⠁⠀⠀                    
-// ██          ██      ██ ██   ██ ███⣃⣤⠶⠞⣫⣤⣟⣛⣷⣶⣿⢟⡦⣾⠟⠀⠀⠀                    
-// ███████     ██     ██  ███████  ██⡏⠾⠿⣶⣿⣿⣿⠿⣛⣽⣾⡿⠚⠁⠀                    
-//      ██ ██  ██    ██        ██  ██⠀⣠⠏⠉⠛⠳⠶⢶⣶⡿⠿⠟⠊⠉⠀                    
-// ███████  █████    ██        ██  ██⠉⠁⠀⠀⠀⠀⠀⣀⣀⣀⡀  
+//  ██████  █████  █████     ███   ██⡷⠀⠀⠀⢀⣴⠞⠓⠲⠦⣤⡀⠀⠀⣠⡿⠁⠀⠀                    
+// ██          ██     ██   ██ ██  ███⣃⣤⠶⠞⣫⣤⣟⣛⣷⣶⣿⢟⡦⣾⠟⠀⠀⠀                    
+// ██████      ██    ██  ██   ██   ██⡏⠾⠿⣶⣿⣿⣿⠿⣛⣽⣾⡿⠚⠁⠀                    
+//      ██ ██  ██   ██   ████████  ██⠀⣠⠏⠉⠛⠳⠶⢶⣶⡿⠿⠟⠊⠉⠀                    
+// ██████   ████    ██        ██  ████⠁⠀⠀⠀⠀⠀⣀⣀⣀⡀  
 
 // ███████ ███    ███ ███████ ██████   █████  ██      ██████   ██████ 
 // ██      ████  ████ ██      ██   ██ ██   ██ ██      ██   ██ ██      
@@ -34,13 +34,17 @@
 // https://t.me/partyhat
 // SJ741 EMERALDS
 
+// WARNING - Fungible NFT specs are universally new, and inherently DANGEROUS
+// no systems have been built with these usecases in mind, and there are a number of 
+// ways that experimental, complex contracts can lead to unforseen consequences.
+// INTERACT WITH EXPERIMENTAL SMART CONTRACTS AT YOUR OWN RISK
+
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-
 // libraries to separate ERC20 and ERC721 events, and certain signature-specific functions
 // ERC20 events
-library libST20 {
+library libSJ20 {
     event Transfer(address indexed from, address indexed to, uint amount);
     event Approval(address indexed owner, address indexed spender, uint256 value);
     function emitTransfer(address _from, address _to, uint _amount) internal { emit Transfer(_from, _to, _amount); }
@@ -48,7 +52,7 @@ library libST20 {
 }
 
 // ERC721 events
-library libST721 {
+library libSJ721 {
     event Transfer(address indexed _from, address indexed _to, uint indexed _tokenId);
     event Approval(address indexed _owner, address indexed _approved, uint indexed _tokenId);
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
@@ -89,17 +93,17 @@ interface IERC721 is IERC165 {
 interface ISJ741 is IERC20, IERC721 {
     // library transfers can not be included in the interface
     // incorporate them directly with library
-    // libST20.Transfer
-    // libST20.Approval
-    // libST721.Transfer
-    // libST721.Approval
-    // libST721.ApprovalForAll
+    // libSJ20.Transfer
+    // libSJ20.Approval
+    // libSJ721.Transfer
+    // libSJ721.Approval
+    // libSJ721.ApprovalForAll
     function balanceOf(address account) external override(IERC20, IERC721) view returns (uint256);
     function approve(address spender, uint256 value) external override(IERC20, IERC721) returns (bool);
     function transferFrom(address from, address to, uint256 value) external override(IERC20, IERC721) returns (bool);
 }
 
- // ERC721 Token Receiver https://eips.ethereum.org/EIPS/eip-721
+// ERC721 Token Receiver https://eips.ethereum.org/EIPS/eip-721
 interface IERC721TokenReceiver {
     function onERC721Received(address _operator, address _from, uint256 _tokenId, bytes memory _data) external returns(bytes4);
 }
@@ -114,7 +118,7 @@ contract SJ741 is ISJ741 {
     uint internal constant _totalIds = 7777;
     uint internal constant _totalSupply = _totalIds * 10**_decimals; 
     uint internal constant ONE = 10**_decimals; // 1.0 token(s)
-    uint internal constant MAXID = ONE + _totalIds; // 1.0000XXXX is the range for NFT IDs
+    uint internal constant MAXID = ONE + _totalIds;  // 1.00000001 : 1.00007777 is the range for NFT IDs
 
     uint32 public minted; // number of unique ID mints
     uint32[] private broken; // broken NFTs stored in limbo list 
@@ -154,8 +158,9 @@ contract SJ741 is ISJ741 {
     function allowance(address owner, address spender) public view override returns (uint) { return _allowance[owner][spender]; }
     function setBaseURI(string memory newBaseURI) public onlyDev {baseURI = newBaseURI;}
     function changeDev(address newDev) public onlyDev {dev = newDev;}//simple function to change developer address, or revoke ownership (with address(0))
-    // toggleNFTinterface is for the small possibility of frontend system changes leading the contract to favor enabling the disabled supportsNFTinterface flag
-    // don't waste it, as frontends don't change these kinds of things willingly yet
+    // @DEV toggleNFTinterface is for the small possibility of frontend system changes leading the contract to favor enabling the disabled supportsNFTinterface flag
+    // don't waste it, as frontends don't typically change classification of contracts
+    // probably never to be used.
     function toggelNFTinterface() public onlyDev {supportsNFTinterface = !supportsNFTinterface;}
 
 
@@ -167,7 +172,7 @@ contract SJ741 is ISJ741 {
             address owner = ownerOf[amount]; // getting the owner of token ID via the `amount` input
             if (msg.sender != owner && !isApprovedForAll(owner, msg.sender)) revert("SJ741: You are not approved");
             _nftApprovals[amount] = spender; // calling nft approval for the token and spender
-            libST721.emitApproval(owner, spender, amount);
+            libSJ721.emitApproval(owner, spender, amount);
             return true;
         }
         
@@ -175,11 +180,11 @@ contract SJ741 is ISJ741 {
         // the NFT ID range being set within a limited subset of ONE token(s)
         // allows for non-clashing interactions
         _allowance[msg.sender][spender] = amount;
-        libST20.emitApproval(msg.sender, spender, amount);
+        libSJ20.emitApproval(msg.sender, spender, amount);
         return true;
     }
 
-    function _transfer20721(address from, address to, uint amount) internal virtual {
+    function _transfer741(address from, address to, uint amount) internal virtual {
         
         require(_balanceOf[from] >= amount, "SJ741: transfer amount exceeds balance");
         
@@ -277,7 +282,7 @@ contract SJ741 is ISJ741 {
             idToIndex[id] = ownedLen; // Map NFT ID to its index in owner's array
             ownedNFTs[to].push(id); // Add new NFT ID to owner's list
 
-            libST721.emitTransfer(address(0), to, id); // Emit NFT transfer event
+            libSJ721.emitTransfer(address(0), to, id); // Emit NFT transfer event
 
             unchecked {
                 ownedLen++; // Increment count of owned NFTs
@@ -300,7 +305,7 @@ contract SJ741 is ISJ741 {
         idToIndex[tokenId] = ownedNFTs[to].length; // Map the new token ID to its index in the owner's list
         ownedNFTs[to].push(tokenId); // Add the new token ID to the owner's list of owned tokens
         
-        libST721.emitTransfer(address(0), to, tokenId); // Emit an event for the token transfer
+        libSJ721.emitTransfer(address(0), to, tokenId); // Emit an event for the token transfer
     }
 
 
@@ -328,7 +333,7 @@ contract SJ741 is ISJ741 {
         unchecked {
             _balanceOf[to] += amount; // Add the amount to the recipient's balance
         }
-        libST20.emitTransfer(from, to, amount); // Emit an ERC20 transfer event
+        libSJ20.emitTransfer(from, to, amount); // Emit an ERC20 transfer event
     }
 
     // Handles the transfer of an ERC721 token, ensuring proper ownership and event emission
@@ -338,20 +343,20 @@ contract SJ741 is ISJ741 {
         delete _nftApprovals[tokenId]; // Clear any approvals for this token
         ownerOf[tokenId] = to; // Transfer ownership of the token to 'to'
         _updateOwnedNFTs(from, to, tokenId); // Update ownership tracking structures
-        libST721.emitTransfer(from, to, tokenId); // Emit an ERC721 transfer event
+        libSJ721.emitTransfer(from, to, tokenId); // Emit an ERC721 transfer event
     }
 
 
     // only erc20 calls this
     // if amount is a token id owned my the caller send as an NFT
-    // else transfer20721
+    // else transfer741
     function transfer(address to, uint amount) public override returns (bool) {
         if(ownerOf[amount] == msg.sender) {
             _transfer721(msg.sender, to, uint32(amount));
             _transfer20(msg.sender, to, ONE);
             return true;
         }
-        _transfer20721(msg.sender, to, amount);
+        _transfer741(msg.sender, to, amount);
         return true;
     }
 
@@ -372,7 +377,7 @@ contract SJ741 is ISJ741 {
         }
 
         _spendAllowance(from, msg.sender, amount);
-        _transfer20721(from, to, amount);
+        _transfer741(from, to, amount);
         return true;
 
     }
@@ -425,7 +430,7 @@ contract SJ741 is ISJ741 {
 
     function setApprovalForAll(address operator, bool approved) public override {
         _operatorApprovals[msg.sender][operator] = approved;
-        libST721.emitApprovalForAll(msg.sender, operator, approved);
+        libSJ721.emitApprovalForAll(msg.sender, operator, approved);
     }
 
     function isApprovedForAll(address owner, address operator) public view override returns (bool) {
